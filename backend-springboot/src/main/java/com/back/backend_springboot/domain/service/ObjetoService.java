@@ -1,8 +1,9 @@
-package com.back.backend_springboot.service;
+package com.back.backend_springboot.domain.service;
 
-import com.back.backend_springboot.utils.ResourceNotFoundException;
-import com.back.backend_springboot.model.Objeto;
-import com.back.backend_springboot.repository.ObjetoRepository;
+import com.back.backend_springboot.application.exception.ResourceNotFoundException;
+import com.back.backend_springboot.domain.model.Objeto;
+import com.back.backend_springboot.domain.repository.ObjetoRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

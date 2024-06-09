@@ -1,7 +1,8 @@
-package com.back.backend_springboot.controller;
+package com.back.backend_springboot.application.controller;
 
-import com.back.backend_springboot.model.Objeto;
-import com.back.backend_springboot.service.ObjetoService;
+import com.back.backend_springboot.domain.model.Objeto;
+import com.back.backend_springboot.domain.service.ObjetoService;
+
 import java.time.LocalDateTime;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.back.backend_springboot.controller;
+package com.back.backend_springboot.application.controller;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,8 +13,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.back.backend_springboot.application.dto.LoginDto;
 import com.back.backend_springboot.config.JwtUtil;
-import com.back.backend_springboot.dto.LoginDto;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -26,6 +27,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 @RequestMapping("/api/v1/auth")
 @Tag(name = "Login", description = "Autenticación de inicio de sesión con JWT")
 public class AuthController {
+
     private final AuthenticationManager authenticationManager;
     private final JwtUtil jwtUtil;
 

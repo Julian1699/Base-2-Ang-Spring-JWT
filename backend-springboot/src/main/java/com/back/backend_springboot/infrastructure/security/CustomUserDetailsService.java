@@ -1,4 +1,4 @@
-package com.back.backend_springboot.service;
+package com.back.backend_springboot.infrastructure.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -9,19 +9,19 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.back.backend_springboot.model.UserEntity;
-import com.back.backend_springboot.model.UserRoleEntity;
-import com.back.backend_springboot.repository.UserRepository;
+import com.back.backend_springboot.domain.model.UserEntity;
+import com.back.backend_springboot.domain.model.UserRoleEntity;
+import com.back.backend_springboot.domain.repository.UserRepository;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class UserSecurityService implements UserDetailsService {
+public class CustomUserDetailsService implements UserDetailsService {
     private final UserRepository userRepository;
 
     @Autowired
-    public UserSecurityService(UserRepository userRepository) {
+    public CustomUserDetailsService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 

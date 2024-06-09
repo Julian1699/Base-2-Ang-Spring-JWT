@@ -1,4 +1,4 @@
-package com.back.backend_springboot.model;
+package com.back.backend_springboot.domain.model;
 
 import java.time.LocalDateTime;
 

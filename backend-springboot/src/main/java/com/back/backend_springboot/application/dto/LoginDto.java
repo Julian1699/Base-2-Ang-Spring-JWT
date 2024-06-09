@@ -1,4 +1,4 @@
-package com.back.backend_springboot.dto;
+package com.back.backend_springboot.application.dto;
 
 import lombok.Data;
 

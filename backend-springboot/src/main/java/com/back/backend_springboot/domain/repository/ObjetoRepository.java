@@ -1,4 +1,4 @@
-package com.back.backend_springboot.repository;
+package com.back.backend_springboot.domain.repository;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.back.backend_springboot.model.Objeto;
+import com.back.backend_springboot.domain.model.Objeto;
 
 @Repository
 public interface ObjetoRepository extends JpaRepository <Objeto, Long> {
