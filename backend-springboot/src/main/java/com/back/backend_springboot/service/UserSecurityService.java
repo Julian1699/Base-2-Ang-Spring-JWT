@@ -30,8 +30,6 @@ public class UserSecurityService implements UserDetailsService {
         UserEntity userEntity = this.userRepository.findByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User " + username + " not found."));
 
-        System.out.println(userEntity);
-
         String[] roles = userEntity.getRoles().stream().map(UserRoleEntity::getRole).toArray(String[]::new);
 
         return User.builder()
@@ -46,13 +44,8 @@ public class UserSecurityService implements UserDetailsService {
     private List<GrantedAuthority> grantedAuthorities(String[] roles) {
         List<GrantedAuthority> authorities = new ArrayList<>(roles.length);
 
-        for (String role: roles) {
+        for (String role : roles) {
             authorities.add(new SimpleGrantedAuthority("ROLE_" + role));
-
-            // Add additional authorities if needed
-            if ("ADMIN".equals(role) || "CUSTOMER".equals(role)) {
-                authorities.add(new SimpleGrantedAuthority("random_order"));
-            }
         }
 
         return authorities;
