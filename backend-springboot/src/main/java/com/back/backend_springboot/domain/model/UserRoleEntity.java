@@ -1,11 +1,11 @@
 package com.back.backend_springboot.domain.model;
 
 import java.time.LocalDateTime;
-
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 @Table(name = "user_role")
@@ -25,5 +25,6 @@ public class UserRoleEntity {
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
+    @JsonBackReference
     private UserEntity user;
 }
