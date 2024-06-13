@@ -1,6 +1,6 @@
 # Backend del Sistema de Gestión de Objetos 
 
-| Spring Boot | MySQL |
+| Spring Boot | JWT | MySQL |
 
 ## Aplicación de Gestión de Objetos con Spring Boot y MySQL
 
@@ -18,12 +18,16 @@ El objetivo central de este backend es proporcionar una API eficiente y centrali
 - **Persistencia con JPA y Hibernate**: La gestión de datos se realiza a través de JPA y Hibernate, asegurando una interacción eficiente con la base de datos.
 - **Documentación con Swagger**: La API está documentada con Swagger, proporcionando una interfaz interactiva para probar los endpoints.
 - **Base de Datos MySQL**: Utilizamos MySQL para la gestión de bases de datos relacional.
+- **Seguridad con JWT**: Implementación de seguridad mediante JSON Web Tokens (JWT) para autenticar y autorizar a los usuarios. Los tokens se generan al iniciar sesión y se invalidan al cerrar sesión, protegiendo las rutas sensibles.
+- **Arquitectura Hexagonal**: El backend está diseñado utilizando la arquitectura hexagonal, lo que permite una separación clara entre la lógica de negocio y la infraestructura, facilitando la mantenibilidad y escalabilidad del código.
 
 ## Configurar Conexión a tu Base de Datos
 
 Es importante configurar el archivo `application.properties` con las credenciales de conexión a tu base de datos local. Este proyecto está diseñado para aceptar conexiones a bases de datos MySQL, PostgreSQL y OracleSQL. En este caso, se proporcionan las credenciales de conexión para MySQL.
 
 ![image](https://github.com/Julian1699/Base-Angular-SpringBoot/assets/114323630/aa8773ae-80c0-4e39-ae1b-fd37bd532362)
+
+- Hay un archivo llamado `Data.sql` en el directorio de `Resources` el cual contiene scripts de población de base de datos, para en su debido caso, testear la funcionalidad de la base de datos y la aplicación integradas.
 
 ## Funcionalidades CRUD
 
@@ -75,3 +79,5 @@ Permite a los usuarios buscar objetos en la base de datos utilizando varios filt
 - Swagger: Documentación interactiva de la API.
 
 - MySQL: Sistema de gestión de bases de datos relacional.
+  
+- JWT (JSON Web Tokens): Para autenticación y autorización.
