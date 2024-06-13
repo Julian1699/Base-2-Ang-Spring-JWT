@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { Observable, Subject, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 import { LoginDto } from '../models/login-dto'; 
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +13,18 @@ export class LoginService {
   private apiUrl = 'http://localhost:8080/api/v1/auth';
   public loginStatusSubject = new Subject<boolean>();
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private snackBar: MatSnackBar) { }
 
   // Generamos el token
   public generateToken(loginData: LoginDto): Observable<{ token: string }> {
-    return this.http.post<{ token: string }>(`${this.apiUrl}/login`, loginData);
+    return this.http.post<{ token: string }>(`${this.apiUrl}/login`, loginData).pipe(
+      catchError((error) => {
+        if (error.status === 401) {
+          this.snackBar.open('Credenciales incorrectas', 'Cerrar', { duration: 3000 });
+        }
+        return throwError(error);
+      })
+    );
   }
 
   // Obtenemos el usuario actual
@@ -35,11 +44,14 @@ export class LoginService {
   }
 
   // Cerramos sesión y eliminamos el token del localStorage
+  // login.service.ts
   public logout(): boolean {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
+    localStorage.removeItem('username');
     return true;
   }
+
 
   // Obtenemos el token
   public getToken(): string | null {
@@ -77,5 +89,4 @@ export class LoginService {
   public getUsername(): string | null {
     return localStorage.getItem('username');
   }
-
 }

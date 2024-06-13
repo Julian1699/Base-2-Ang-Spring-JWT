@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { UserService } from '../../services/user.service';
 import { Router } from '@angular/router';
-import { UserEntity } from '../../models/user-entity';
+import { UserService } from '../../services/user.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-signup',
@@ -11,7 +10,7 @@ import { UserEntity } from '../../models/user-entity';
 })
 export class SignupComponent {
 
-  user: UserEntity = {
+  user: any = {
     username: '',
     password: '',
     email: '',
@@ -20,19 +19,18 @@ export class SignupComponent {
     telefono: ''
   };
 
-  constructor(private userService: UserService, private router: Router) {}
+  constructor(private userService: UserService, private router: Router, private snackBar: MatSnackBar) {}
 
   formSubmit() {
-    if (this.user.username.trim() === '' || this.user.password.trim() === '' || this.user.email.trim() === '') {
-      return;
-    }
-
     this.userService.addUser(this.user).subscribe(
       (response: any) => {
+        this.snackBar.open('Usuario registrado con éxito', 'Cerrar', { duration: 3000 });
         this.router.navigate(['/login']);
       },
       (error) => {
-        console.error('Error al registrar usuario', error);
+        if (error.status === 409) {
+          this.snackBar.open('El nombre de usuario ya está registrado', 'Cerrar', { duration: 3000 });
+        }
       }
     );
   }
