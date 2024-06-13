@@ -1,13 +1,13 @@
 # Sistema de Gestión de Objetos 
-| Angular| SpringBoot | MySQL |
+| Angular | SpringBoot | JWT | MySQL |
 
 ## Aplicación de Gestión de Objetos con Angular, Spring Boot y MySQL
 
-![Final App A+S FullStack](https://github.com/Julian1699/Base-Angular-SpringBoot/assets/114323630/eefc0579-fe91-4357-8867-0490c3b2f27a)
+![Final App A+S+JWT](https://github.com/Julian1699/Base-2-Ang-Spring-JWT/assets/114323630/cd5b21f6-eb26-4c4c-9ec9-0923942f78cd)
 
 ¡Bienvenido al repositorio del proyecto de la Aplicación de Gestión de Objetos! En esta versión, hemos empleado MySQL para una mayor escalabilidad y rendimiento. La aplicación utiliza tecnologías modernas como Angular y Spring Boot.
 
-![image](https://github.com/Julian1699/Base-Angular-SpringBoot/assets/114323630/4e8b8112-537b-4782-8029-cc38a817c1ba)
+![image](https://github.com/Julian1699/Base-2-Ang-Spring-JWT/assets/114323630/e0a48284-f4e0-47fd-935f-5c100c27e096)
 
 ## Descripción
 
@@ -16,7 +16,7 @@ El objetivo central de esta aplicación es proporcionar una plataforma eficiente
 ## Características Clave
 
 ### Frontend Angular
-Hemos utilizado Angular para construir una interfaz de usuario altamente interactiva y dinámica. Los componentes de Angularestán organizados jerárquicamente, brindando una experiencia fluida y receptiva a los usuarios.
+Hemos utilizado Angular para construir una interfaz de usuario altamente interactiva y dinámica. Los componentes de Angular están organizados jerárquicamente, brindando una experiencia fluida y receptiva a los usuarios.
 
 ### Gestión de Estilos con Bootstrap
 La apariencia profesional y amigable para el usuario se logra mediante el uso de Bootstrap, que permite aplicar estilos y diseño de manera coherente.
@@ -33,6 +33,12 @@ Hemos utilizado controladores REST de Spring para definir y gestionar las divers
 ### Persistencia con JPA y Hibernate
 La capa de persistencia y gestión de datos se realiza a través de JPA y Hibernate. En esta versión hemos utilizado MySQL, lo que mejora la escalabilidad y el rendimiento.
 
+### Seguridad con JWT
+Implementación de seguridad mediante JSON Web Tokens (JWT) para autenticar y autorizar a los usuarios. Los tokens se generan al iniciar sesión y se invalidan al cerrar sesión, protegiendo las rutas sensibles.
+
+### Arquitectura Hexagonal en el Backend
+El backend está diseñado utilizando la arquitectura hexagonal, lo que permite una separación clara entre la lógica de negocio y la infraestructura, facilitando la mantenibilidad y escalabilidad del código.
+
 ## Tecnologías Empleadas
 
 ### Frontend
@@ -46,6 +52,7 @@ La capa de persistencia y gestión de datos se realiza a través de JPA y Hibern
 - **Spring Data JPA**: Para interactuar con la base de datos.
 - **Swagger**: Documentación interactiva de la API.
 - **MySQL**: Sistema de gestión de bases de datos relacional.
+- **JWT (JSON Web Tokens)**: Para autenticación y autorización.
 
 ## Instalación y Ejecución
 
@@ -57,7 +64,7 @@ La capa de persistencia y gestión de datos se realiza a través de JPA y Hibern
 ### Pasos
 1. Clonar el repositorio:
     ```bash
-    git clone https://github.com/Julian1699/Base-Angular-SpringBoot.git
+    git clone https://github.com/Julian1699/Base-2-Ang-Spring-JWT.git
     ```
 
 2. Instalar dependencias del frontend:
@@ -70,7 +77,6 @@ La capa de persistencia y gestión de datos se realiza a través de JPA y Hibern
     ```
 
 3. Ejecutar el frontend:
-
     ```bash
     npm start
     ```
@@ -85,14 +91,16 @@ Es importante configurar el archivo `application.properties` con las credenciale
     ```bash
     cd ../backend-springboot
     ```
-    
+
     ```bash
     ./mvnw install
     ```
-    
+
     ```bash
     ./mvnw spring-boot:run
     ```
+
 6. Acceder a la aplicación:
    - Frontend: `http://localhost:4200`
    - Backend: `http://localhost:8080`
+
