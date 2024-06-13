@@ -27,7 +27,9 @@ Es importante configurar el archivo `application.properties` con las credenciale
 
 ![image](https://github.com/Julian1699/Base-Angular-SpringBoot/assets/114323630/aa8773ae-80c0-4e39-ae1b-fd37bd532362)
 
-- Hay un archivo llamado `Data.sql` en el directorio de `Resources` el cual contiene scripts de población de base de datos, para en su debido caso, testear la funcionalidad de la base de datos y la aplicación integradas.
+- Hay un archivo llamado `data.sql` en el directorio de `Resources` el cual contiene scripts de población de base de datos, para en su debido caso, testear la funcionalidad de la base de datos y la aplicación integradas.
+
+![image](https://github.com/Julian1699/Base-2-Ang-Spring-JWT/assets/114323630/56db8d9c-7b1c-4d8c-b866-265ff0ccd523)
 
 ## Funcionalidades CRUD
 
