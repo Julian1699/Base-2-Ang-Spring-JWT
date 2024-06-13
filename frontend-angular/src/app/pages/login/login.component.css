@@ -1,0 +1,54 @@
+/* Ajustamos el contenedor principal */
+.bootstrap-wrapper {
+  background-color: #fff; /* Blanco */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Espaciado interno */
+  min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+}
+
+/* Ajustamos el contenedor del formulario */
+.custom-container {
+  background-color: #dd0031; /* Rojo Angular */
+  padding: 20px 20px; /* Más relleno para hacer el formulario más espacioso */
+  border-radius: 10px;
+  color: #000; /* Color del texto negro para mejor legibilidad */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadir sombra para un efecto más elegante */
+  width: 100%;
+  max-width: 500px; /* Máximo ancho del contenedor */
+  margin: 20px; /* Margen superior e inferior */
+}
+
+/* Ajustamos el contenido interno */
+.form-content {
+  background-color: #ffffff; /* Blanco */
+  padding: 20px; /* Relleno interno */
+  border-radius: 10px;
+  color: #000;
+}
+
+.submit-button {
+  background-color: #007bff; /* Azul */
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: #0056b3; /* Azul oscuro para el hover */
+}
+
+.text-primary {
+  color: #007bff; /* Color primario para enlaces */
+}
+
+a.text-primary:hover {
+  color: #0056b3; /* Color más oscuro para el hover de enlaces */
+}
+
+.full-width {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px; /* Espaciado entre los campos del formulario */
+}

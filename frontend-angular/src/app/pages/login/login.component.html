@@ -1,0 +1,37 @@
+<div class="bootstrap-wrapper">
+  <div class="custom-container">
+    <div class="form-content">
+      <h1 class="text-center">Inicio de sesión</h1>
+      <div class="container text-center">
+        <img src="assets/images/angular-logo.png" alt="Angular Logo" style="height: 100px; margin-right: 10px;" />
+      </div>
+      <br><br>
+      <form (ngSubmit)="formSubmit()" class="text-center">
+        <div class="form-group">
+          <h4>Username</h4>
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Escribe tu correo</mat-label>
+            <input [(ngModel)]="loginData.username" name="username" required matInput placeholder="Digite su correo">
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <h4>Password</h4>
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Escribe tu contraseña</mat-label>
+            <input [(ngModel)]="loginData.password" name="password" required type="password" matInput placeholder="Digite su contraseña">
+          </mat-form-field>
+        </div>
+        <br><br>
+        <div class="container text-center">
+          <button type="submit" mat-raised-button color="primary" class="submit-button">Ingresar</button>
+          <button type="reset" style="margin-left: 20px;" mat-raised-button color="accent">Limpiar</button>
+          <br><br>
+          <a href="#" class="text-primary">Olvidé mi contraseña</a>
+          <br><br>
+          <span>¿No tienes una cuenta?</span><a href="/signup" class="text-primary" style="text-decoration: underline;">Regístrate aquí</a>
+          <br><br>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -11,7 +11,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/" routerLinkActive="active"><i class="fas fa-home"></i> Inicio</a>
+          <a class="nav-link" aria-current="page" routerLink="/bienvenida" routerLinkActive="active"><i class="fas fa-home"></i> Inicio</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/agregar-objeto" routerLinkActive="active"><i class="fas fa-plus-circle"></i> Agregar Objeto</a>
@@ -24,6 +24,12 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/tecnologias" routerLinkActive="active"><i class="fas fa-cogs"></i> Tecnologías</a>
+        </li>
+        <li class="nav-item">
+          <span class="nav-link active"><i class="fas fa-user"></i> Usuario: {{ username }}</span>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link btn btn-link" (click)="logout()"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</button>
         </li>
       </ul>
     </div>
