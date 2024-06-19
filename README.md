@@ -7,6 +7,12 @@
 
 ¡Bienvenido al repositorio del proyecto de la Aplicación de Gestión de Objetos! En esta versión, hemos empleado MySQL para una mayor escalabilidad y rendimiento. La aplicación utiliza tecnologías modernas como Angular y Spring Boot.
 
+## Login 
+
+![image](https://github.com/Julian1699/Base-2-Ang-Spring-JWT/assets/114323630/f09ad292-28aa-421d-b2fb-a9577805ac9d)
+
+## Menu principal
+
 ![image](https://github.com/Julian1699/Base-2-Ang-Spring-JWT/assets/114323630/e0a48284-f4e0-47fd-935f-5c100c27e096)
 
 ## Descripción
